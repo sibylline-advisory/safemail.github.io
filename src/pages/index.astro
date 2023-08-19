@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Modal from '../components/Modal.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Safemail">
+<body>
 	<main>
 		<svg
 			class="astro-a"
@@ -33,34 +35,84 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Welcome to <span class="text-gradient">Safemail lol</span></h1>
-		<p class="instructions">
+		<!-- <h1>Welcome to <span class="text-gradient">Safemail</span></h1> -->
+		<!-- <p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		</p> -->
+		<div class="bg-white py-10">
+			<div class="text-center my-5 
+			grid justify-items-center 
+			flex items-center
+			">
+			<p class="h-5 text-blue-600"> Safemail </p>
+
+				<Modal id="dialog" open="Get started" >
+					<main slot="main">
+					  <p class="text-black">Don’t want to deal with suspicious email?</p>
+					  <hr />					  
+					  <img width="60" height="80" src="../public/favicon.svg" alt="Astro logo" />
+					</main>
+					<button slot="close">Close modal</button>
+				  </Modal>
+			</div>
+		</div>
+		<div>
+			<h2>Get your time back from hunting down suspicious emails</h2>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="https://docs.astro.build/"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Community"
+					body="Come say hi to our amazing Discord community. ❤️"
+				/>
+			</ul>
+		</div>
+		<div>
+			<h2>Testimonials</h2>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="https://twitter.com/io_sean_p"
+					title="Sean P"
+					body="Learn how Astro works and explore the official API docs."
+				/>
+				<Card
+					href="https://twitter.com/seyitaylor"
+					title="Seyi T"
+					body="It's super based"
+				/>
+			</ul>
+		</div>
+		<div style="display:flex">
+			<div style="justify-items:center">
+				<ul>
+					<li>Seshat Bank</li>
+					<li>Perelion</li>
+					<li>Shopthru</li>
+					<li>Sibylline</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<h2>About Us</h2>
+			<p>Safemail was created by Product executives and cybersecurity subject matter experts at leading firms including PwC.</p>
+		</div>
 	</main>
+</body>
 </Layout>
 
 <style>
@@ -69,7 +121,7 @@ import Card from '../components/Card.astro';
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: #333333;
 		font-size: 20px;
 		line-height: 1.6;
 	}
