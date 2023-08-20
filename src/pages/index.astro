@@ -45,7 +45,7 @@ import Modal from '../components/Modal.astro';
 			grid justify-items-center 
 			flex items-center
 			">
-			<p class="h-5 text-blue-600"> Safemail </p>
+				<h1 class="h-5 text-blue-900"> SafeMail </h1>
 
 				<Modal id="dialog" open="Get started" >
 					<main slot="main">
@@ -88,7 +88,7 @@ import Modal from '../components/Modal.astro';
 				<Card
 					href="https://twitter.com/io_sean_p"
 					title="Sean P"
-					body="Learn how Astro works and explore the official API docs."
+					body="Makes our bank super secure which is dope"
 				/>
 				<Card
 					href="https://twitter.com/seyitaylor"
@@ -97,15 +97,14 @@ import Modal from '../components/Modal.astro';
 				/>
 			</ul>
 		</div>
-		<div style="display:flex">
-			<h2>Used by organizations like these</h2>
-			<div style="justify-items:center">
-				<ul>
-					<li>Seshat Bank</li>
-					<li>Perelion</li>
-					<li>Shopthru</li>
-					<li>Sibylline</li>
-				</ul>
+		<div>
+			<h2>Teams get their time back with Safemail at companies like these</h2>
+			<div style="max-width:100%; display:flex; flex-wrap:wrap; align-items: center; justify-content:center; gap: 2%;" >
+				<img alt="seshat" src="/seshatbank_logo.png" height="80px" style="height:70px !important;">
+				<img alt="shopthru" src="/shopthru_logo.svg" height="80px">
+				<img alt="sibylline" src="/sibylline-logo.png" height="80">
+				<img alt="proelium" src="/ProeliumLaw-Logo.png" height="80">
+				<img alt="harvest" src="/harvest_icon@88.png" height="80">
 			</div>
 		</div>
 		<div>
@@ -173,4 +172,9 @@ import Modal from '../components/Modal.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+	img {
+		height:80px !important;
+		margin: 9px 3px;
+	}
+
 </style>
