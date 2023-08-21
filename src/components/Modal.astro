@@ -30,11 +30,44 @@ const {id, open} = Astro.props;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: rgba(93, 93, 93, 0.19);
+    background: rgba(26, 29, 57, 0.35);
   }
+
+  p{
+    color: #2B3B3E !important;
+  }
+  
+  button[data-tid="btn-close"]{
+    border: solid 1px #B00C0C;
+    border-radius: 4px;
+    width: 38px;
+    height: 20px;
+  }
+
+  div[data-tid="field-input"] {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin: 4rem 0rem;
+}
+
+.field-input label {
+  font-weight: bold;
+}
+
+.field-input input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.field-input input:read-only {
+  cursor: copy;
+}
+
 </style>
-
-
-
-
-<!-- <button onclick={`window.${id}.showModal()`}>{open}</button> -->
