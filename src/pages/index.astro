@@ -81,7 +81,7 @@ import Modal from '../components/Modal.astro';
 				<img alt="harvest" src="harvest_icon@88.png" height="80">
 			</div>
 		</div>
-		<div>
+		<div class="container-section">
 			<h2>About Us</h2>
 			<p>Safemail was created by Product executives and Cybersecurity experts coming from leading firms including Accenture, Slide, and PwC.</p>
 		</div>
@@ -179,9 +179,8 @@ import Modal from '../components/Modal.astro';
 	}
 	.get-started:is(:hover, :focus-within) {
 		background-position: 0;
-		/* background-image: var(--accent-gradient); */
-		box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.2);
-		transform: scale(1.125);
+		filter: brightness(1.09);
+		transform: scale(1.07);
 	}
 	.container-section{
 		margin: 3rem 0rem;
