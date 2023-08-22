@@ -5,186 +5,207 @@ import Modal from '../components/Modal.astro';
 ---
 
 <Layout title="Safemail">
-<body>
-	<main>
-		<div class="bg-white pt-24">
-			<div class="text-center my-5 
+    <body>
+    <main>
+        <div class="bg-white pt-24">
+            <div class="text-center my-5
 			grid justify-items-center 
 			flex items-center
 			">
-				<h1 class="text-blue-900"> Safemail </h1>
-				<div class="get-started" >
-					<Modal id="dialog" open="Get started" >
-					<main slot="main">
-					  <p>Don’t want to deal with suspicious email?</p>
-					  <hr />					  
-					  <!-- <img width="60" height="80" src="favicon.svg" alt="Astro logo" /> -->
-					  <div data-tid="field-input">
-						<label for="email">Email:</label>
-						<input type="text" id="email" value="agent@in.safemail.ai" readonly>
-					  </div>
-
-					</main>
-					<button data-tid="btn-close" slot="close">Close</button>
-				  </Modal>
-				</div>
-				<p>No installation needed. Get started free.</p>
-			</div>
-		</div>
-		<div class="container-section">
-			<h2>Stop wasting time and get peace of mind</h2>
-			<ul role="list" class="link-card-grid">
-				<Card
-					href=""
-					title="Phishing detection"
-					body="Identify if an email coming from a colleague is actually a clever phishing attack"
-				/>
-				<Card
-					href=""
-					title="File Analysis"
-					body="Safemail safely cracks suspicious file attachments and provides analysis"
-				/>
-				<!-- <Card
-					href=""
-					title="Themes"
-					body="Explore a galaxy of community-built starter themes."
-				/>
-				<Card
-					href=""
-					title="IT integration"
-					body="Come say hi to our amazing Discord community. ❤️"
-				/> -->
-			</ul>
-		</div>
-		<div class="container-section">
-			<h2>Testimonials</h2>
-			<ul role="list" class="link-card-grid">
-				<Card
-					href="https://twitter.com/io_sean_p"
-					title="Sean P."
-					body="In our line of work, privacy is paramount. Safemail makes identifying potential threats over email easy and helps us keep focused and safe."
-				/>
-				<Card
-					href="https://twitter.com/seyitaylor"
-					title="Seyi T."
-					body="As someone who relies heavily on email for client communications, Safemail gives me a way to quickly identify potential threats without losing focus."
-				/>
-			</ul>
-		</div>
-		<div class="container-section">
-			<h2>Used by teams at companies like these</h2>
-			<div style="max-width:100%; display:flex; flex-wrap:wrap; align-items: center; justify-content:center; gap: 2%; margin: 1.5rem 0rem;" >
-				<img alt="seshat" src="seshatbank_logo.png" height="80px" style="height:70px !important;">
-				<img alt="shopthru" src="shopthru_logo.svg" height="80px">
-				<img alt="sibylline" src="sibylline-logo.png" height="80">
-				<img alt="proelium" src="ProeliumLaw-Logo.png" height="80">
-				<img alt="harvest" src="harvest_icon@88.png" height="80">
-			</div>
-		</div>
-		<div>
-			<h2>About Us</h2>
-			<p>Safemail was created by Product executives and Cybersecurity experts coming from leading firms including Accenture, Slide, and PwC.</p>
-		</div>
-	</main>
-</body>
+                <h1 class="text-blue-900"> Safemail </h1>
+                <div class="get-started">
+                    <Modal id="dialog" open="Get started">
+                        <main slot="main">
+                            <p class="text-blue-900 p-2">Don’t want to deal with suspicious email?</p>
+                            <p class="text-blue-900 p-2">Forward email and get instant confidence right to your
+                                inbox</p>
+                            <hr/>
+                            <!-- <img width="60" height="80" src="favicon.svg" alt="Astro logo" /> -->
+                            <div data-tid="field-input" class="m-2">
+                                <label>Email Us:</label>
+                                <a href="mailto:agent@inbound.safemail.ai">agent@inbound.safemail.ai</a>
+                            </div>
+                        </main>
+                        <button data-tid="btn-close" slot="close" class="m-2">Close</button>
+                    </Modal>
+                </div>
+                <p>No installation needed. Get started free.</p>
+            </div>
+        </div>
+        <div class="container-section">
+            <h2>Stop wasting time and get peace of mind</h2>
+            <ul role="list" class="link-card-grid">
+                <Card
+                        href=""
+                        title="Phishing detection"
+                        body="Identify if an email coming from a colleague is actually a clever phishing attack"
+                />
+                <Card
+                        href=""
+                        title="File Analysis"
+                        body="Safemail safely cracks suspicious file attachments and provides analysis"
+                />
+                <!-- <Card
+                    href=""
+                    title="Themes"
+                    body="Explore a galaxy of community-built starter themes."
+                />
+                <Card
+                    href=""
+                    title="IT integration"
+                    body="Come say hi to our amazing Discord community. ❤️"
+                /> -->
+            </ul>
+        </div>
+        <div class="container-section">
+            <h2>Testimonials</h2>
+            <ul role="list" class="link-card-grid">
+                <Card
+                        href="https://twitter.com/io_sean_p"
+                        title="Sean P."
+                        body="In our line of work, privacy is paramount. Safemail makes identifying potential threats over email easy and helps us keep focused and safe."
+                />
+                <Card
+                        href="https://twitter.com/seyitaylor"
+                        title="Seyi T."
+                        body="As someone who relies heavily on email for client communications, Safemail gives me a way to quickly identify potential threats without losing focus."
+                />
+            </ul>
+        </div>
+        <div class="container-section">
+            <h2>Used by teams at companies like these</h2>
+            <div style="max-width:100%; display:flex; flex-wrap:wrap; align-items: center; justify-content:center; gap: 2%; margin: 1.5rem 0rem;">
+                <img alt="seshat" src="seshatbank_logo.png" height="80px" style="height:70px !important;">
+                <img alt="shopthru" src="shopthru_logo.svg" height="80px">
+                <img alt="sibylline" src="sibylline-logo.png" height="80">
+                <img alt="proelium" src="ProeliumLaw-Logo.png" height="80">
+                <img alt="harvest" src="harvest_icon@88.png" height="80">
+            </div>
+        </div>
+        <div>
+            <h2>About Us</h2>
+            <p>Safemail was created by product executives and cyber security experts coming from leading firms including
+                Accenture, Revolut, and PwC.</p>
+        </div>
+    </main>
+    <div class="">
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+        <stripe-pricing-table pricing-table-id="prctbl_1NgR7KKI1xxiTbPeZ3IP0Nqr"
+                              publishable-key="pk_live_51MqHU4KI1xxiTbPeXZBJ23neWakogIsDq2YD2pfBrENWIilgazn0IrJyNdZzWRuKFXfUGyQZJV4cu1lrAK4mBSMk00VDKMUx62">
+        </stripe-pricing-table>
+    </div>
+    </body>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: #333333;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-family: 'Comfortaa','Sans-serif';
-		font-size: 4rem !important;
-		font-weight: 700 !important;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1rem;
-	}
-	h2{
-		font-family: 'Comfortaa','Sans-serif';
-		font-size: 1.5rem !important;
-		color: #242E3D !important;
-		margin: 0.5rem 0rem !important;
-	}
-	p{
-		font-family: 'Lato', 'Sans-serif';
-		color: #2B3B3E;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	img {
-		height:80px !important;
-		margin: 9px 3px;
-	}
-	.get-started{
-		display:flex;
-		justify-content: center;
-		width: 180px;
-		height: 50px;
-		max-width: 180px;
-		border: 1px solid white;
-		border-radius: 7px;
-		margin: 2rem 0rem .5rem 0rem;
-		color: #F9FAFA;
-		font-family: 'Lato';
-		/* background-color: var(--accent-gradient); */
-		background-image: var(--sm-accent-gradient);
-		text-shadow: -2px 2px 6px rgba(5, 86, 158, 0.44) ;
-		transition: transform 0.045s ease-in-out;
-	}
-	.get-started:is(:hover, :focus-within) {
-		background-position: 0;
-		/* background-image: var(--accent-gradient); */
-		box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.2);
-		transform: scale(1.125);
-	}
-	.container-section{
-		margin: 3rem 0rem;
-	}
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: #333333;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+
+    h1 {
+        font-family: 'Comfortaa', 'Sans-serif';
+        font-size: 4rem !important;
+        font-weight: 700 !important;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-family: 'Comfortaa', 'Sans-serif';
+        font-size: 1.5rem !important;
+        color: #242E3D !important;
+        margin: 0.5rem 0rem !important;
+    }
+
+    p {
+        font-family: 'Lato', 'Sans-serif';
+        color: #2B3B3E;
+    }
+
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .instructions code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+
+    img {
+        height: 80px !important;
+        margin: 9px 3px;
+    }
+
+    .get-started {
+        display: flex;
+        justify-content: center;
+        width: 180px;
+        height: 50px;
+        max-width: 180px;
+        border: 1px solid white;
+        border-radius: 7px;
+        margin: 2rem 0rem .5rem 0rem;
+        color: #F9FAFA;
+        font-family: 'Lato';
+        /* background-color: var(--accent-gradient); */
+        background-image: var(--sm-accent-gradient);
+        text-shadow: -2px 2px 6px rgba(5, 86, 158, 0.44);
+        transition: transform 0.045s ease-in-out;
+    }
+
+    .get-started:is(:hover, :focus-within) {
+        background-position: 0;
+        /* background-image: var(--accent-gradient); */
+        box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.2);
+        transform: scale(1.125);
+    }
+
+    .container-section {
+        margin: 3rem 0rem;
+    }
 
 </style>
