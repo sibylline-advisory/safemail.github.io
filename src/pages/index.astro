@@ -15,18 +15,44 @@ import Modal from '../components/Modal.astro';
                 <h1 class="text-blue-900"> Safemail AI </h1>
                 <div class="get-started">
                     <Modal id="dialog" open="Get started">
-                        <main slot="main">
-                            <p class="text-blue-900 p-2">Don’t want to deal with suspicious email?</p>
-                            <p class="text-blue-900 p-2">Forward email and get instant confidence right to your
-                                inbox</p>
-                            <hr/>
-                            <!-- <img width="60" height="80" src="favicon.svg" alt="Astro logo" /> -->
-                            <div data-tid="field-input" class="m-2">
-                                <label>Email Us:</label>
-                                <a href="mailto:agent@inbound.safemail.ai">agent@inbound.safemail.ai</a>
-                            </div>
+                        <main slot="main" style="display:flex; flex-wrap:wrap; justify-content: center;">
+                            <h2 >Don’t want to deal with suspicious emails?</h2>                            
+                            <hr style="border: 0px; display: block; width: 76%; background-color: #BCBCBC; height: 1px;">
+							<div style="max-width:76%; display:flex; justify-content: center; flex-wrap:wrap;">
+								<p style="text-align:left;" class="p-4">Simply forward the email you are concerned about to our agent email and verify the threat right in your inbox in seconds.
+								</p>                            
+								<div data-tid="field-input" class="m-2">
+									<fieldset>
+										<div class="row" style="display:flex; align-items:flex-start; flex-direction:column;">
+										  <label for="example1-name" class="text-sm font-bold">Agent Email</label>
+										  <input id="example1-name" type="text" value="agent@inbound.safemail.ai" required="" autocomplete="name" disabled style="width:250px;
+										  background-color: #F4F4F4;
+										  border-radius: 7px;
+										  padding: 0px 4px;">
+										</div>
+									</fieldset>
+								</div>									
+							</div>
                         </main>
-                        <button data-tid="btn-close" slot="close" class="m-2">Close</button>
+                        <button slot="close" class="mb-4 w-28 h-8 text-red-800 rounded-xl hover:bg-red-100">Close</button>
+
+						<!-- .field-input label {
+							font-weight: bold;
+						  }
+						  
+						  .field-input input {
+							flex-grow: 1;
+							border: 1px solid #ccc;
+							padding: 0.5rem;
+							background-color: #f9f9f9;
+							color: #333;
+							border-radius: 4px;
+							cursor: pointer;
+						  }
+						  
+						  .field-input input:read-only {
+							cursor: copy;
+						  } -->
                     </Modal>
                 </div>
                 <p class="p-2">No installation needed. Get started free.</p>
@@ -137,6 +163,8 @@ import Modal from '../components/Modal.astro';
         font-size: 1.8rem !important;
         color: #242E3D !important;
         margin: 0.5rem 0rem !important;
+		
+		white-space: normal;
     }
 
     p {
@@ -206,7 +234,8 @@ import Modal from '../components/Modal.astro';
         background-position: 0;
         /* background-image: var(--accent-gradient); */
         box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.2);
-        transform: scale(1.125);
+        transform: scale(1.07);
+		filter: brightness(1.07);
     }
 
     .container-section {
