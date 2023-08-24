@@ -36,41 +36,13 @@ const {id, open} = Astro.props;
   p{
     color: #2B3B3E !important;
   }
-  
-  /* Commenting these out since they're not selecting the elements; using tailwind instead */
-  /*
-  .btn-close{
-    border: solid 1px #B00C0C;
-    border-radius: 4px;
-    width: 38px;
-    height: 20px;
+
+  @media only screen and (max-width:600px) {
+    dialog{
+        top: calc(0vh - 20%);
+        max-width: 390px;
+        width: 95%;
+    }
   }
-
-  div[data-tid="field-input"] {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  margin: 4rem 0rem;
-}
-
-.field-input label {
-  font-weight: bold;
-}
-
-.field-input input {
-  flex-grow: 1;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  background-color: #f9f9f9;
-  color: #333;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.field-input input:read-only {
-  cursor: copy;
-}
-*/
 
 </style>
