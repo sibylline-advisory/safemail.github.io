@@ -21,11 +21,11 @@ import Modal from '../components/Modal.astro';
 							<div style="max-width:76%; display:flex; justify-content: center; flex-wrap:wrap;">
 								<p style="text-align:left;" class="p-4">Simply forward the email you are concerned about to our agent email and verify the threat right in your inbox in seconds.
 								</p>                            
-								<div data-tid="field-input" class="m-2">
+								<div data-tid="field-input" class="m-2" style="position:relative;">
 									<fieldset>
 										<div class="row" style="display:flex; align-items:flex-start; flex-direction:column;">
 										  <label for="example1-name" class="text-sm font-bold">Agent Email</label>
-										  <button class="hover:brightness-95" style="display:flex; align-items:center; width: 264px; background-color: #EFF4F5; color: #2B3B3E; border-radius: 7px; padding: 0px 4px;" id="click-copy" value="agent@inbound.safemail.ai">
+										  <button class="hover:brightness-95" style="display:flex; align-items:center; width: 270px; background-color: #EFF4F5; color: #2B3B3E; border-radius: 7px; padding: 0px 4px;" id="click-copy" value="agent@inbound.safemail.ai">
 											agent@inbound.safemail.ai
 											<!-- <input id="example1-name" type="text" value="agent@inbound.safemail.ai" required="" autocomplete="name" disabled 
 											style="background-color: #EFF4F5; -->
@@ -35,24 +35,45 @@ import Modal from '../components/Modal.astro';
 											<!-- border-radius: 7px; -->
 											<!-- padding: 0px 4px;  -->
 											<!-- "> -->
-											<svg stroke="currentColor" fill-color="#2B3B3E" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 px-0.5" height="1.5rem" width="1.5rem" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>			
+											<svg class="h-6 w-6 px-0.5 pl-2" stroke="currentColor" fill-color="#2B3B3E" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1.5rem" width="1.5rem" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>			
 										  </button>									
 										</div>
 									</fieldset>
+									<div id="popup" 									
+									style="display: none;
+									position: absolute;
+									font-size: 14px;
+									background-color: #333;									
+									color: #F9FAFA;
+									padding: 2px 8px;
+									border-radius: 4px;
+									box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+									top: -2px;
+									right: 0;
+									"
+									>
+										Copied!
+									</div>
 								</div>									
 							</div>
 							<script>
-								const clickableDiv = document.getElementById('click-copy');
-								// const inputElement = document.getElementById('example1-name');
+								const clickableDiv = document.getElementById('click-copy');								
 								const inputElement = document.getElementById('click-copy');
+								const popup = document.getElementById('popup');
 
 								clickableDiv.addEventListener('click', () => {
 								const textToCopy = inputElement.value;
 								navigator.clipboard.writeText(textToCopy)
-									.then(() => {
-									// Success callback
-									alert('Text copied to clipboard: ' + textToCopy);
-									})
+								.then(() => {
+								// Success callback
+								// alert('Text copied to clipboard: ' + textToCopy);
+								// })
+								const rect = clickableDiv.getBoundingClientRect();
+								popup.style.display = 'block';								
+								// setTimeout(() => {
+								// 	popup.style.display = 'none';
+								// }, 2350); // 2.35 seconds
+								})
 									.catch((error) => {
 									// Error callback
 									console.error('Failed to copy text to clipboard:', error);
