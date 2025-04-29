@@ -33,7 +33,7 @@ export default function StickyHeader() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Image src="/logo-glow.png" alt="Safemail AI Logo" width={40} height={40} className="h-10 w-10" />
+          <Image src="/Safemail AI Logo.png" alt="Safemail AI Logo" width={40} height={40} className="h-10 w-10" />
           <span className="text-xl font-medium text-slate-900">Safemail AI</span>
         </div>
         <nav className="hidden md:flex items-center gap-8">
