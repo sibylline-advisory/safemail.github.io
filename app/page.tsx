@@ -242,7 +242,7 @@ export default function Home() {
                   </ScrollLink>
                 </li>
                 <li>
-                  <Link href="/blog" className="text-slate-400 hover:text-white text-sm">
+                  <Link href="http://thoughts.sibylline.xyz/" className="text-slate-400 hover:text-white text-sm" target="_blank" rel="noopener noreferrer">
                     Blog
                   </Link>
                 </li>
