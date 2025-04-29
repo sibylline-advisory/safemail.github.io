@@ -247,7 +247,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-slate-400 hover:text-white text-sm">
+                  <Link href="mailto:contact@sibylline.group" className="text-slate-400 hover:text-white text-sm">
                     Contact
                   </Link>
                 </li>
