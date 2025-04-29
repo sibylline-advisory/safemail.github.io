@@ -1,5 +1,4 @@
-"use client"
-
+import { Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Shield, FileCheck, Zap, ArrowRight } from "lucide-react"
@@ -14,6 +13,12 @@ import ScrollLink from "@/components/scroll-link"
 import ScrollToTop from "@/components/scroll-to-top"
 import StickyHeader from "@/components/sticky-header"
 import MobileMenu from "@/components/mobile-menu"
+import { Skeleton } from "@/components/ui/skeleton"
+
+export const metadata = {
+  title: "Email Security, Simplified",
+  description: "Forward any suspicious email and get instant analysis. No installation. No configuration needed.",
+}
 
 export default function Home() {
   return (
@@ -45,7 +50,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative h-[400px] lg:h-[500px]">
-                <HeroAnimation />
+                <Suspense fallback={<Skeleton className="h-full w-full rounded-xl" />}>
+                  <HeroAnimation />
+                </Suspense>
               </div>
             </div>
           </div>
@@ -58,7 +65,20 @@ export default function Home() {
               <h2 className="text-3xl font-medium tracking-tight text-slate-900">Simple Security Process</h2>
               <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">Start protecting your business in under 60 seconds</p>
             </div>
-            <HowItWorks />
+            <Suspense fallback={
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                {[...Array(3)].map((_, i) => (
+                  <div key={i} className="flex flex-col items-center">
+                    <Skeleton className="h-16 w-16 rounded-full mb-6" />
+                    <Skeleton className="h-4 w-32 mb-4" />
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-5/6 mt-2" />
+                  </div>
+                ))}
+              </div>
+            }>
+              <HowItWorks />
+            </Suspense>
           </div>
         </section>
 
@@ -110,9 +130,13 @@ export default function Home() {
                 See why companies across industries rely on Safemail AI
               </p>
             </div>
-            <TestimonialCarousel />
+            <Suspense fallback={<Skeleton className="h-64 w-full rounded-xl" />}>
+              <TestimonialCarousel />
+            </Suspense>
             <div className="mt-20">
-              <TrustedBy />
+              <Suspense fallback={<Skeleton className="h-12 w-full" />}>
+                <TrustedBy />
+              </Suspense>
             </div>
           </div>
         </section>
@@ -124,7 +148,15 @@ export default function Home() {
               <h2 className="text-3xl font-medium tracking-tight text-slate-900">Pricing Plans</h2>
               <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">Choose the plan that fits your security needs</p>
             </div>
-            <PricingTable />
+            <Suspense fallback={
+              <div className="grid gap-8 md:grid-cols-3">
+                {[...Array(3)].map((_, i) => (
+                  <Skeleton key={i} className="h-[500px] w-full rounded-xl" />
+                ))}
+              </div>
+            }>
+              <PricingTable />
+            </Suspense>
           </div>
         </section>
 
@@ -166,7 +198,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/safemail_ai_logo.png" alt="Safemail AI Logo" width={32} height={32} className="h-8 w-8" />
+                <Image src="/safemail_ai_logo.png" alt="Safemail AI Logo" width={32} height={32} className="h-8 w-8" priority />
                 <span className="text-lg font-medium text-white">Safemail AI</span>
               </div>
               <p className="text-slate-400 text-sm">Instant email security with zero configuration.</p>
