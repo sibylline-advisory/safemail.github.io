@@ -1,312 +1,158 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import HowItWorks from '../components/how-it-works.astro';
+import Testimonials from '../components/testimonials.astro';
+import TrustedBy from '../components/trusted-by.astro';
+import PricingTable from '../components/pricing-table.astro';
 ---
 
 <Layout title="Safemail AI - Email Security Solution">
-  <div class="flex flex-col min-h-screen">
-    <!-- Header/Nav -->
-    <header class="bg-white py-4 border-b border-gray-200">
-      <div class="container mx-auto px-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-          <svg width="40" height="40" viewBox="0 0 368 302" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
-            <path 
-              fill-rule="evenodd" clip-rule="evenodd" 
-              d="M0 229.4C0 242.338 10.5364 252.874 23.4745 252.874H129.075L118.09 237.263H23.4745C19.136 237.263 15.6497 233.738 15.6497 229.438V53.4999L174.906 300.158C176.386 301.446 178.216 302.09 180.008 302.09C181.8 302.09 183.63 301.446 185.11 300.158L227.952 236.396H344.525C357.464 236.396 368 225.86 368 212.922V43.9403L352.35 64.5373V212.961C352.35 217.299 348.825 220.786 344.525 220.786H238.441L352.35 51.2532V51.3411L368 30.209V23.4745C368 10.5364 357.464 0 344.525 0C344.525 0 288.357 42.6105 264.263 42.6105C251.243 42.6105 233.947 30.1681 218.048 18.7304L218.048 18.7303C204.525 9.00169 192.012 0 184 0C174.597 0 155.679 12.3998 138.254 23.8213C123.378 33.5724 109.589 42.6105 103.737 42.6105C91.0316 42.6105 23.4745 0 23.4745 0C10.5364 0 0 10.5364 0 23.4745V27.3479V229.4ZM352.35 23.7197V23.4745C352.35 19.1747 348.864 15.6497 344.525 15.6497C344.525 15.6497 286.42 58.2602 264.263 58.2602C252.52 58.2602 235.578 46.2931 219.65 35.0429C205.523 25.0643 192.194 15.6497 184 15.6497C176.028 15.6497 163.648 24.5947 150.232 34.288C134.314 45.7894 116.938 58.3443 103.737 58.2602C79.4105 58.1053 23.4745 15.6497 23.4745 15.6497V15.6884C19.1747 15.6884 15.6497 19.1747 15.6497 23.5133V25.3742L180.008 283.295L352.35 23.7197Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span class="text-2xl font-bold text-gray-900">Safemail AI</span>
-        </div>
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#features" class="text-gray-600 hover:text-primary font-medium">Features</a>
-          <a href="#testimonials" class="text-gray-600 hover:text-primary font-medium">Testimonials</a>
-          <a href="#pricing" class="text-gray-600 hover:text-primary font-medium">Pricing</a>
-          <a href="#about" class="text-gray-600 hover:text-primary font-medium">About</a>
-        </nav>
-        <div>
-          <a href="#contact-us" class="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg">Get Started</a>
-        </div>
-      </div>
-    </header>
+  <div class="flex flex-col min-h-screen bg-white">
+    <Header />
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-white to-gray-50 py-20">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Protect Your Inbox from Phishing Attacks</h1>
-          <p class="text-xl text-gray-600 mb-8">Safemail AI analyzes suspicious emails and file attachments to keep you and your team safe from cyber threats.</p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contact-us" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg shadow-lg">
-              Get Started Free
-            </a>
-            <a href="#how-it-works" class="bg-white hover:bg-gray-50 text-gray-800 font-bold py-3 px-6 rounded-lg border border-gray-300 shadow-lg">
-              How It Works
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Stop wasting time and get peace of mind</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-100">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Phishing Detection</h3>
-            <p class="text-gray-600">Identify if an email coming from a colleague is actually a clever phishing attack.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-100">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M16 13H8" />
-                <path d="M16 17H8" />
-                <path d="M10 9H8" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">File Analysis</h3>
-            <p class="text-gray-600">Safemail safely cracks suspicious file attachments and provides analysis.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-100">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Instant Response</h3>
-            <p class="text-gray-600">Get real-time analysis and recommendations directly in your inbox within seconds.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how-it-works" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">How Safemail Works</h2>
-        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-          <div class="flex flex-col space-y-6">
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4">1</div>
-              <div>
-                <h3 class="text-xl font-bold mb-1">Forward Suspicious Emails</h3>
-                <p class="text-gray-600">Simply forward any suspicious email to our agent email address:</p>
-                <div class="flex items-center mt-2 bg-gray-100 p-3 rounded-md">
-                  <code class="font-mono text-sm text-gray-800">agent@inbound.safemail.ai</code>
-                  <button id="copy-button" class="ml-2 p-1 text-gray-500 hover:text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                      <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                    </svg>
-                  </button>
-                </div>
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="py-20 md:py-32 bg-gradient-brand relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 md:px-6 relative">
+          <div class="grid gap-12 lg:grid-cols-2 items-center">
+            <div class="flex flex-col gap-6">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white">
+                Email security,
+                <span class="block">simplified.</span>
+              </h1>
+              <p class="text-xl text-white/80 max-w-[500px]">
+                Forward any suspicious email and get instant analysis. No installation. No configuration.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                <a href="#try-now" class="inline-flex h-11 items-center justify-center rounded-full px-6 py-2 bg-white text-primary-dark hover:bg-white/90 shadow font-medium">
+                  Try for Free
+                  <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4">2</div>
-              <div>
-                <h3 class="text-xl font-bold mb-1">AI Analysis</h3>
-                <p class="text-gray-600">Our AI engine analyzes the email content, headers, links, and attachments for malicious indicators.</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4">3</div>
-              <div>
-                <h3 class="text-xl font-bold mb-1">Get Instant Results</h3>
-                <p class="text-gray-600">Receive a detailed security report directly in your inbox with a clear verdict and recommended actions.</p>
+            <div class="relative h-[400px] lg:h-[500px]">
+              <!-- Placeholder for the hero animation -->
+              <div class="absolute inset-0 flex items-center justify-center text-white">
+                <img src="/safemail-icon-wb.png" alt="Safemail AI" class="w-64 h-64">
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-100">
-            <div class="flex items-center mb-4">
-              <div class="mr-4">
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">How It Works</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">Secure your inbox in three simple steps</p>
+          </div>
+          <HowItWorks />
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">What We Detect</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">
+              Our AI-powered analysis gives you complete confidence in your email security
+            </p>
+          </div>
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                  <path d="M20 6L9 17l-5-5" />
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
                 </svg>
               </div>
-              <div>
-                <h3 class="text-xl font-bold">Sean P.</h3>
-                <a href="https://twitter.com/io_sean_p" class="text-primary text-sm hover:underline">@io_sean_p</a>
-              </div>
+              <h3 class="text-xl font-medium mb-2 text-slate-900">Phishing Detection</h3>
+              <p class="text-slate-600">
+                Identify if an email from a colleague is actually a clever phishing attack
+              </p>
             </div>
-            <p class="text-gray-600">"In our line of work, information security is paramount. Safemail makes identifying potential threats over email easy and helps us keep focused and safe."</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-100">
-            <div class="flex items-center mb-4">
-              <div class="mr-4">
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                  <path d="M20 6L9 17l-5-5" />
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                  <path d="M10 9H8" />
                 </svg>
               </div>
-              <div>
-                <h3 class="text-xl font-bold">Seyi T.</h3>
-                <a href="https://twitter.com/seyitaylor" class="text-primary text-sm hover:underline">@seyitaylor</a>
+              <h3 class="text-xl font-medium mb-2 text-slate-900">File Analysis</h3>
+              <p class="text-slate-600">
+                Safely analyze suspicious file attachments without risking your system
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
               </div>
-            </div>
-            <p class="text-gray-600">"As someone who relies heavily on email for client communications, Safemail gives me a way to quickly identify potential threats without losing focus."</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trusted By -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Used by teams at companies like these</h2>
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          <a href="https://seshatbank.com" target="_blank" class="grayscale hover:grayscale-0 transition-all">
-            <img src="seshatbank_logo.png" alt="Seshat Bank" class="h-10 md:h-16">
-          </a>
-          <a href="https://sibylline.xyz" target="_blank" class="grayscale hover:grayscale-0 transition-all">
-            <img src="sibylline-logo.png" alt="Sibylline" class="h-10 md:h-16">
-          </a>
-          <a href="https://www.riseworks.io" target="_blank" class="grayscale hover:grayscale-0 transition-all">
-            <img src="rise_logo.svg" alt="Rise" class="h-10 md:h-16">
-          </a>
-          <a href="https://joinharvest.xyz" target="_blank" class="grayscale hover:grayscale-0 transition-all">
-            <img src="harvest_icon@88.png" alt="Harvest" class="h-10 md:h-16">
-          </a>
-          <a href="https://www.simplicitygroup.xyz" target="_blank" class="grayscale hover:grayscale-0 transition-all">
-            <img src="sg_logo.jpeg" alt="Simplicity Group" class="h-10 md:h-16">
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section with Stripe Integration (preserved from original) -->
-    <section id="pricing" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Simple, Transparent Pricing</h2>
-        <div>
-          <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-          <stripe-pricing-table pricing-table-id="prctbl_1NgR7KKI1xxiTbPeZ3IP0Nqr"
-                                publishable-key="pk_live_51MqHU4KI1xxiTbPeXZBJ23neWakogIsDq2YD2pfBrENWIilgazn0IrJyNdZzWRuKFXfUGyQZJV4cu1lrAK4mBSMk00VDKMUx62">
-          </stripe-pricing-table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Us / CTA -->
-    <section id="contact-us" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-6">Ready to protect your inbox?</h2>
-          <p class="text-xl text-gray-600 mb-8">Get started with Safemail AI today - no installation needed.</p>
-          <a href="#pricing" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg shadow-lg">
-            Get Started Free
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
-        <div class="max-w-3xl mx-auto text-center">
-          <p class="text-gray-600 mb-6">
-            Safemail was created by product executives and cyber security experts coming from leading firms including Accenture, Revolut, and PwC.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-auto">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between">
-          <div class="mb-8 md:mb-0">
-            <div class="flex items-center space-x-2 mb-4">
-              <svg width="32" height="32" viewBox="0 0 368 302" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
-                <path 
-                  fill-rule="evenodd" clip-rule="evenodd" 
-                  d="M0 229.4C0 242.338 10.5364 252.874 23.4745 252.874H129.075L118.09 237.263H23.4745C19.136 237.263 15.6497 233.738 15.6497 229.438V53.4999L174.906 300.158C176.386 301.446 178.216 302.09 180.008 302.09C181.8 302.09 183.63 301.446 185.11 300.158L227.952 236.396H344.525C357.464 236.396 368 225.86 368 212.922V43.9403L352.35 64.5373V212.961C352.35 217.299 348.825 220.786 344.525 220.786H238.441L352.35 51.2532V51.3411L368 30.209V23.4745C368 10.5364 357.464 0 344.525 0C344.525 0 288.357 42.6105 264.263 42.6105C251.243 42.6105 233.947 30.1681 218.048 18.7304L218.048 18.7303C204.525 9.00169 192.012 0 184 0C174.597 0 155.679 12.3998 138.254 23.8213C123.378 33.5724 109.589 42.6105 103.737 42.6105C91.0316 42.6105 23.4745 0 23.4745 0C10.5364 0 0 10.5364 0 23.4745V27.3479V229.4ZM352.35 23.7197V23.4745C352.35 19.1747 348.864 15.6497 344.525 15.6497C344.525 15.6497 286.42 58.2602 264.263 58.2602C252.52 58.2602 235.578 46.2931 219.65 35.0429C205.523 25.0643 192.194 15.6497 184 15.6497C176.028 15.6497 163.648 24.5947 150.232 34.288C134.314 45.7894 116.938 58.3443 103.737 58.2602C79.4105 58.1053 23.4745 15.6497 23.4745 15.6497V15.6884C19.1747 15.6884 15.6497 19.1747 15.6497 23.5133V25.3742L180.008 283.295L352.35 23.7197Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <span class="text-xl font-bold">Safemail AI</span>
-            </div>
-            <p class="text-gray-400">Email security made simple.</p>
-          </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div>
-              <h3 class="text-lg font-semibold mb-4">Product</h3>
-              <ul class="space-y-2">
-                <li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
-                <li><a href="#how-it-works" class="text-gray-400 hover:text-white">How it works</a></li>
-                <li><a href="#pricing" class="text-gray-400 hover:text-white">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold mb-4">Company</h3>
-              <ul class="space-y-2">
-                <li><a href="#about" class="text-gray-400 hover:text-white">About us</a></li>
-                <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold mb-4">Legal</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-400 hover:text-white">Privacy</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Terms</a></li>
-              </ul>
+              <h3 class="text-xl font-medium mb-2 text-slate-900">Instant Results</h3>
+              <p class="text-slate-600">Get comprehensive analysis within minutes, not hours</p>
             </div>
           </div>
         </div>
-        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; Sibylline Advisory Ltd, 2025. All rights reserved.</p>
+      </section>
+
+      <!-- Social Proof Section -->
+      <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">What Our Users Say</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">
+              See why companies across industries rely on Safemail AI
+            </p>
+          </div>
+          <Testimonials />
+          <div class="mt-20">
+            <TrustedBy />
+          </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <!-- Pricing Section with Stripe integration -->
+      <section id="pricing" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">Simple Pricing</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">Choose the plan that fits your security needs</p>
+          </div>
+          <PricingTable />
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="try-now" class="py-20 bg-gradient-brand relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 md:px-6 text-center relative">
+          <div class="max-w-[600px] mx-auto">
+            <h2 class="text-3xl font-medium tracking-tight text-white">Start Securing Your Emails Today</h2>
+            <p class="mt-4 text-white/80 text-lg">
+              Forward your first suspicious email and experience the peace of mind that comes with Safemail AI
+            </p>
+            <div class="mt-8">
+              <a href="#pricing" class="inline-flex h-11 items-center justify-center rounded-full px-8 bg-white text-primary-dark hover:bg-white/90 shadow font-medium">
+                Create Free Account
+              </a>
+            </div>
+            <p class="mt-6 text-sm text-white/70">No credit card required. Start with 10 free email analyses.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
   </div>
 </Layout>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const copyButton = document.getElementById('copy-button');
-    if (copyButton) {
-      copyButton.addEventListener('click', () => {
-        const emailText = 'agent@inbound.safemail.ai';
-        navigator.clipboard.writeText(emailText)
-          .then(() => {
-            // Visual feedback
-            copyButton.innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            `;
-            
-            setTimeout(() => {
-              copyButton.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                </svg>
-              `;
-            }, 2000);
-          })
-          .catch(err => {
-            console.error('Failed to copy text: ', err);
-          });
-      });
-    }
-  });
-</script>

@@ -22,8 +22,10 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#22b8cf", // Teal color from the middle of the gradient
+          light: "#63e6be", // Light teal/green
+          dark: "#1971c2", // Dark blue
+          foreground: "#ffffff",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -49,6 +51,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        "gradient-brand": "linear-gradient(90deg, #1971c2 0%, #22b8cf 50%, #63e6be 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",
