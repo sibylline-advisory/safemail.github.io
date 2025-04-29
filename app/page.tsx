@@ -146,6 +146,20 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        {/* About Us Section */}
+        <section id="about" className="py-16 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-medium tracking-tight text-slate-900">About Us</h2>
+            </div>
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-slate-600 text-lg mb-6">
+                Safemail was created by product executives and cyber security experts coming from leading firms including Accenture, Revolut, and PwC.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="bg-slate-900 py-12">
@@ -182,9 +196,9 @@ export default function Home() {
               <h3 className="font-medium text-sm text-white mb-4">Company</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/about" className="text-slate-400 hover:text-white text-sm">
+                  <ScrollLink href="#about" className="text-slate-400 hover:text-white text-sm">
                     About Us
-                  </Link>
+                  </ScrollLink>
                 </li>
                 <li>
                   <Link href="/blog" className="text-slate-400 hover:text-white text-sm">
