@@ -16,7 +16,7 @@ import MobileMenu from "@/components/mobile-menu"
 import { Skeleton } from "@/components/ui/skeleton"
 
 export const metadata = {
-  title: "Email Security, Simplified",
+  title: "Safemail AI – Email Security, Simplified",
   description: "Forward any suspicious email and get instant analysis. No installation. No configuration needed.",
 }
 
@@ -59,7 +59,7 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="py-24 md:py-32 bg-gradient-to-b from-white to-slate-50">
+        <section id="how-it-works" className="py-24 md:py-32 bg-gradient-to-b from-white to-blue-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900">How It Works</h2>
@@ -93,7 +93,7 @@ export default function Home() {
         </section>
 
         {/* Threats We Detect Section */}
-        <section id="features" className="py-20 bg-slate-50">
+        <section id="features" className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-medium tracking-tight text-slate-900">Threats We Detect</h2>
@@ -132,7 +132,7 @@ export default function Home() {
         </section>
 
         {/* Social Proof Section */}
-        <section id="testimonials" className="py-20 bg-white">
+        <section id="testimonials" className="py-20 bg-slate-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-medium tracking-tight text-slate-900">What Our Users Say</h2>
@@ -152,7 +152,7 @@ export default function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 bg-slate-50">
+        <section id="pricing" className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-medium tracking-tight text-slate-900">Pricing Plans</h2>
@@ -189,7 +189,7 @@ export default function Home() {
         </section>
         
         {/* About Us Section */}
-        <section id="about" className="py-16 bg-white">
+        <section id="about" className="py-16 bg-slate-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-medium tracking-tight text-slate-900">About Us</h2>
@@ -225,11 +225,6 @@ export default function Home() {
                   <ScrollLink href="#pricing" className="text-slate-400 hover:text-white text-sm">
                     Pricing
                   </ScrollLink>
-                </li>
-                <li>
-                  <Link href="/enterprise" className="text-slate-400 hover:text-white text-sm">
-                    Enterprise
-                  </Link>
                 </li>
               </ul>
             </div>

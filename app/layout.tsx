@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Safemail AI - Email Security, Simplified',
+    default: 'Safemail AI – Email Security, Simplified',
     template: '%s | Safemail AI'
   },
   description: 'Forward any suspicious email and get instant analysis. No installation. No configuration.',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://safemail.ai',
-    title: 'Safemail AI - Email Security, Simplified',
+    title: 'Safemail AI – Email Security, Simplified',
     description: 'Forward any suspicious email and get instant analysis. No installation. No configuration.',
     siteName: 'Safemail AI',
     images: [
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Safemail AI - Email Security, Simplified',
+    title: 'Safemail AI – Email Security, Simplified',
     description: 'Forward any suspicious email and get instant analysis. No installation. No configuration.',
     images: ['/og-image.png'],
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/safemail_ai_logo.png',
+    shortcut: '/safemail_ai_logo.png',
+    apple: '/safemail_ai_logo.png',
   },
   manifest: '/site.webmanifest',
 }

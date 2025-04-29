@@ -20,7 +20,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <div className="grid gap-8 md:grid-cols-3 relative">
+    <div className="grid gap-6 md:grid-cols-3 relative">
       {steps.map((step, index) => (
         <div key={index} className="flex flex-col items-center text-center relative p-6 bg-white rounded-xl shadow-sm">
           <div className="w-20 h-20 rounded-full bg-gradient-brand flex items-center justify-center mb-8 shadow-md">
@@ -36,12 +36,11 @@ export default function HowItWorks() {
           </div>
 
           {index < steps.length - 1 && (
-            <div className="hidden md:block absolute left-[95%] top-20 transform translate-x-1/2 z-10">
-              <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden md:block absolute left-[100%] top-1/4 transform translate-x-[-10px] z-10">
+              <svg width="50" height="24" viewBox="0 0 50 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path 
-                  d="M79.0607 21.0607C79.6464 20.4749 79.6464 19.5251 79.0607 18.9393L69.5147 9.3934C68.9289 8.80761 67.9792 8.80761 67.3934 9.3934C66.8076 9.97919 66.8076 10.9289 67.3934 11.5147L75.8787 20L67.3934 28.4853C66.8076 29.0711 66.8076 30.0208 67.3934 30.6066C67.9792 31.1924 68.9289 31.1924 69.5147 30.6066L79.0607 21.0607ZM0 21.5H78V18.5H0V21.5Z" 
+                  d="M49.0607 13.0607C49.6464 12.4749 49.6464 11.5251 49.0607 10.9393L39.5147 1.3934C38.9289 0.807611 37.9792 0.807611 37.3934 1.3934C36.8076 1.97919 36.8076 2.92893 37.3934 3.51472L45.8787 12L37.3934 20.4853C36.8076 21.0711 36.8076 22.0208 37.3934 22.6066C37.9792 23.1924 38.9289 23.1924 39.5147 22.6066L49.0607 13.0607ZM0 13.5H48V10.5H0V13.5Z" 
                   fill="#94A3B8"
-                  strokeWidth="2"
                 />
               </svg>
             </div>
