@@ -62,8 +62,8 @@ export default function Home() {
         <section id="how-it-works" className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-medium tracking-tight text-slate-900">Simple Security Process</h2>
-              <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">Start protecting your business in under 60 seconds</p>
+              <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900">How It Works</h2>
+              <p className="text-slate-600 mt-6 max-w-[600px] mx-auto text-lg">Start protecting your business in under 60 seconds</p>
             </div>
             <Suspense fallback={
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
