@@ -59,26 +59,36 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="py-20 bg-white">
+        <section id="how-it-works" className="py-24 md:py-32 bg-gradient-to-b from-white to-slate-50">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900">How It Works</h2>
-              <p className="text-slate-600 mt-6 max-w-[600px] mx-auto text-lg">Start protecting your business in under 60 seconds</p>
+              <p className="text-slate-600 mt-6 max-w-[700px] mx-auto text-xl">Start protecting your business in under 60 seconds</p>
             </div>
             <Suspense fallback={
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 {[...Array(3)].map((_, i) => (
                   <div key={i} className="flex flex-col items-center">
-                    <Skeleton className="h-16 w-16 rounded-full mb-6" />
-                    <Skeleton className="h-4 w-32 mb-4" />
+                    <Skeleton className="h-20 w-20 rounded-full mb-6" />
+                    <Skeleton className="h-6 w-40 mb-4" />
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-4 w-5/6 mt-2" />
                   </div>
                 ))}
               </div>
             }>
-              <HowItWorks />
+              <div className="max-w-5xl mx-auto">
+                <HowItWorks />
+              </div>
             </Suspense>
+            <div className="mt-16 text-center">
+              <Button size="lg" className="rounded-full px-8 bg-gradient-brand text-white hover:bg-blue-600" asChild>
+                <ScrollLink href="#pricing">
+                  <span>Get Started Free</span>
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </ScrollLink>
+              </Button>
+            </div>
           </div>
         </section>
 
