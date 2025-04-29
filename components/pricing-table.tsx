@@ -1,28 +1,27 @@
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useEffect } from "react"
-import Script from "next/script"
 import ScrollLink from "@/components/scroll-link"
 
 export default function PricingTable() {
   const plans = [
     {
-      name: "Free",
+      name: "Safemail AI Basic",
       description: "For individuals who want to try Safemail AI",
-      price: "$0",
-      period: "forever",
+      price: "$6",
+      period: "per month",
       features: [
         "10 email analyses per month",
         "Basic phishing detection",
         "Email report within 30 minutes",
         "Web dashboard access",
+        "7-day free trial",
       ],
-      cta: "Start Free",
-      href: "/signup",
+      cta: "Start Free Trial",
+      href: "https://buy.stripe.com/eVa7sJ1Oae6ch2M9AC",
       highlight: false,
     },
     {
-      name: "Premium",
+      name: "Safemail AI Premium",
       description: "For professionals who need reliable email security",
       price: "$30",
       period: "per month",
@@ -33,13 +32,14 @@ export default function PricingTable() {
         "Email report within 5 minutes",
         "Web dashboard with detailed reports",
         "Email notifications",
+        "14-day free trial",
       ],
-      cta: "Start Trial",
-      href: "/signup?plan=premium",
+      cta: "Start Free Trial",
+      href: "https://buy.stripe.com/6oE4gx3WibY4cMw9AD",
       highlight: true,
     },
     {
-      name: "Pro",
+      name: "Safemail AI Pro",
       description: "For teams that need comprehensive protection",
       price: "Custom",
       period: "",
@@ -51,17 +51,18 @@ export default function PricingTable() {
         "Team dashboard with analytics",
         "API access",
         "Dedicated support",
+        "Personalized onboarding",
       ],
-      cta: "Contact Sales",
-      href: "/contact",
+      cta: "Schedule a Time",
+      href: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0HBhiG8Q25q5flYb8ny3kvniM2sasMbRSVEu_7vdPAPeR0xfIahNjzuLW6RovfBXzF2bnM8nhr",
       highlight: false,
     },
   ]
 
   return (
-    <>
-      {/* Desktop pricing */}
-      <div className="hidden md:grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto">
+      {/* Responsive pricing grid */}
+      <div className="grid gap-8 md:grid-cols-3">
         {plans.map((plan, index) => (
           <div
             key={index}
@@ -98,26 +99,11 @@ export default function PricingTable() {
               }`}
               asChild
             >
-              <ScrollLink href="#try-now">Try for Free</ScrollLink>
+              <a href={plan.href} target="_blank" rel="noopener noreferrer">{plan.cta}</a>
             </Button>
           </div>
         ))}
       </div>
-
-      {/* Mobile Stripe integration */}
-      <div className="md:hidden mt-16 max-w-4xl mx-auto">
-        <Script src="https://js.stripe.com/v3/pricing-table.js" strategy="lazyOnload" />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
-              <stripe-pricing-table 
-                pricing-table-id="prctbl_1NgR7KKI1xxiTbPeZ3IP0Nqr"
-                publishable-key="pk_live_51MqHU4KI1xxiTbPeXZBJ23neWakogIsDq2YD2pfBrENWIilgazn0IrJyNdZzWRuKFXfUGyQZJV4cu1lrAK4mBSMk00VDKMUx62">
-              </stripe-pricing-table>
-            `
-          }}
-        />
-      </div>
-    </>
+    </div>
   )
 }

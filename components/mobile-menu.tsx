@@ -19,28 +19,31 @@ export default function MobileMenu() {
         <nav className="flex flex-col space-y-6">
           <ScrollLink
             href="#how-it-works"
-            className="text-lg font-medium text-slate-900 hover:text-primary py-2"
+            className="text-lg font-medium text-slate-900 hover:text-primary py-2 relative group inline-block"
             onClick={closeMenu}
           >
             How It Works
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
           </ScrollLink>
           <ScrollLink
             href="#features"
-            className="text-lg font-medium text-slate-900 hover:text-primary py-2"
+            className="text-lg font-medium text-slate-900 hover:text-primary py-2 relative group inline-block"
             onClick={closeMenu}
           >
             Features
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
           </ScrollLink>
           <ScrollLink
             href="#pricing"
-            className="text-lg font-medium text-slate-900 hover:text-primary py-2"
+            className="text-lg font-medium text-slate-900 hover:text-primary py-2 relative group inline-block"
             onClick={closeMenu}
           >
             Pricing
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
           </ScrollLink>
           <div className="pt-4 border-t border-slate-100">
             <ScrollLink
-              href="#try-now"
+              href="#pricing"
               className="mt-4 inline-block bg-gradient-brand text-white px-6 py-3 rounded-full text-base font-medium"
               onClick={closeMenu}
             >

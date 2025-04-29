@@ -36,25 +36,37 @@ export default function StickyHeader() {
           <Image src="/safemail_ai_logo.png" alt="Safemail AI Logo" width={40} height={40} className="h-10 w-10" />
           <span className="text-xl font-medium text-slate-900">Safemail AI</span>
         </div>
-        <nav className="hidden md:flex items-center gap-8">
-          <ScrollLink href="#how-it-works" className="text-sm text-slate-600 hover:text-primary transition-colors">
-            How It Works
-          </ScrollLink>
-          <ScrollLink href="#features" className="text-sm text-slate-600 hover:text-primary transition-colors">
-            Features
-          </ScrollLink>
-          <ScrollLink href="#pricing" className="text-sm text-slate-600 hover:text-primary transition-colors">
-            Pricing
-          </ScrollLink>
-        </nav>
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-6">
+          <nav className="flex items-center gap-6 mr-4">
+            <ScrollLink 
+              href="#how-it-works" 
+              className="text-sm text-slate-600 hover:text-primary transition-colors relative group"
+            >
+              How It Works
+              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
+            </ScrollLink>
+            <ScrollLink 
+              href="#features" 
+              className="text-sm text-slate-600 hover:text-primary transition-colors relative group"
+            >
+              Features
+              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
+            </ScrollLink>
+            <ScrollLink 
+              href="#pricing" 
+              className="text-sm text-slate-600 hover:text-primary transition-colors relative group"
+            >
+              Pricing
+              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
+            </ScrollLink>
+          </nav>
           <Button
             asChild
             size="sm"
             variant="outline"
             className="rounded-full border-primary text-primary hover:bg-primary/5"
           >
-            <ScrollLink href="#try-now">Try for Free</ScrollLink>
+            <ScrollLink href="#pricing">Try for Free</ScrollLink>
           </Button>
           <MobileMenuToggle />
         </div>

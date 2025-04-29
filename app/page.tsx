@@ -37,7 +37,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-2">
                   <Button size="lg" className="rounded-full px-6 bg-white text-primary-dark hover:bg-white/90" asChild>
-                    <ScrollLink href="#try-now">
+                    <ScrollLink href="#pricing">
                       <span>Try for Free</span>
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </ScrollLink>
@@ -55,46 +55,46 @@ export default function Home() {
         <section id="how-it-works" className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-medium tracking-tight text-slate-900">How It Works</h2>
-              <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">Secure your inbox in three simple steps</p>
+              <h2 className="text-3xl font-medium tracking-tight text-slate-900">Simple Security Process</h2>
+              <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">Start protecting your business in under 60 seconds</p>
             </div>
             <HowItWorks />
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Threats We Detect Section */}
         <section id="features" className="py-20 bg-slate-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-medium tracking-tight text-slate-900">What We Detect</h2>
+              <h2 className="text-3xl font-medium tracking-tight text-slate-900">Threats We Detect</h2>
               <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">
-                Our AI-powered analysis gives you complete confidence in your email security
+                Our advanced security engine identifies these common email threats
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="border-none shadow-sm bg-white">
                 <CardContent className="pt-6">
                   <Shield className="h-10 w-10 text-primary mb-6" />
-                  <h3 className="text-xl font-medium mb-2 text-slate-900">Phishing Detection</h3>
+                  <h3 className="text-xl font-medium mb-2 text-slate-900">Sophisticated Phishing</h3>
                   <p className="text-slate-600">
-                    Identify if an email from a colleague is actually a clever phishing attack
+                    Detects impersonation attempts, fake login pages, and social engineering tactics
                   </p>
                 </CardContent>
               </Card>
               <Card className="border-none shadow-sm bg-white">
                 <CardContent className="pt-6">
                   <FileCheck className="h-10 w-10 text-primary mb-6" />
-                  <h3 className="text-xl font-medium mb-2 text-slate-900">File Analysis</h3>
+                  <h3 className="text-xl font-medium mb-2 text-slate-900">Malicious Attachments</h3>
                   <p className="text-slate-600">
-                    Safely analyze suspicious file attachments without risking your system
+                    Identifies dangerous file types, hidden malware, and ransomware attempts
                   </p>
                 </CardContent>
               </Card>
               <Card className="border-none shadow-sm bg-white">
                 <CardContent className="pt-6">
                   <Zap className="h-10 w-10 text-primary mb-6" />
-                  <h3 className="text-xl font-medium mb-2 text-slate-900">Instant Results</h3>
-                  <p className="text-slate-600">Get comprehensive analysis within minutes, not hours</p>
+                  <h3 className="text-xl font-medium mb-2 text-slate-900">Unsafe Links</h3>
+                  <p className="text-slate-600">Spots credential harvesters, malware distribution sites, and scam pages</p>
                 </CardContent>
               </Card>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
         <section id="pricing" className="py-20 bg-slate-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-medium tracking-tight text-slate-900">Simple Pricing</h2>
+              <h2 className="text-3xl font-medium tracking-tight text-slate-900">Pricing Plans</h2>
               <p className="text-slate-600 mt-4 max-w-[600px] mx-auto">Choose the plan that fits your security needs</p>
             </div>
             <PricingTable />
@@ -142,7 +142,6 @@ export default function Home() {
                   <ScrollLink href="#features">Learn More</ScrollLink>
                 </Button>
               </div>
-              <p className="mt-6 text-sm text-white/70">No credit card required. Start with 10 free email analyses.</p>
             </div>
           </div>
         </section>
@@ -229,7 +228,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-slate-400">© Safemail AI {new Date().getFullYear()}. All rights reserved.</p>
+            <p className="text-sm text-slate-400">© {new Date().getFullYear()} Sibylline Group. All rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <Link href="https://twitter.com" className="text-slate-400 hover:text-white">
                 <span className="sr-only">Twitter</span>
