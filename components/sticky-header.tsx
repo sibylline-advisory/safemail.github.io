@@ -48,9 +48,6 @@ export default function StickyHeader() {
           </ScrollLink>
         </nav>
         <div className="flex items-center gap-4">
-          <Link href="/login" className="text-sm text-slate-600 hover:text-primary transition-colors hidden md:block">
-            Log in
-          </Link>
           <Button
             asChild
             size="sm"

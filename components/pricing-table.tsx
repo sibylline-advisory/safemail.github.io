@@ -2,6 +2,7 @@ import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useEffect } from "react"
 import Script from "next/script"
+import ScrollLink from "@/components/scroll-link"
 
 export default function PricingTable() {
   const plans = [
@@ -97,7 +98,7 @@ export default function PricingTable() {
               }`}
               asChild
             >
-              <a href={plan.href}>{plan.cta}</a>
+              <ScrollLink href="#try-now">Try for Free</ScrollLink>
             </Button>
           </div>
         ))}

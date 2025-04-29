@@ -39,13 +39,6 @@ export default function MobileMenu() {
             Pricing
           </ScrollLink>
           <div className="pt-4 border-t border-slate-100">
-            <Link
-              href="/login"
-              className="text-lg font-medium text-slate-900 hover:text-primary py-2 block"
-              onClick={closeMenu}
-            >
-              Log in
-            </Link>
             <ScrollLink
               href="#try-now"
               className="mt-4 inline-block bg-gradient-brand text-white px-6 py-3 rounded-full text-base font-medium"

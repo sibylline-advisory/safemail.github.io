@@ -139,7 +139,7 @@ export default function Home() {
               </p>
               <div className="mt-8">
                 <Button size="lg" className="rounded-full px-8 bg-white text-primary-dark hover:bg-white/90" asChild>
-                  <Link href="/signup">Create Free Account</Link>
+                  <ScrollLink href="#features">Learn More</ScrollLink>
                 </Button>
               </div>
               <p className="mt-6 text-sm text-white/70">No credit card required. Start with 10 free email analyses.</p>
