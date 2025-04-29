@@ -167,7 +167,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-4">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/Safemail AI Logo.png" alt="Safemail AI Logo" width={32} height={32} className="h-8 w-8" />
+                <Image src="/safemail_ai_logo.png" alt="Safemail AI Logo" width={32} height={32} className="h-8 w-8" />
                 <span className="text-lg font-medium text-white">Safemail AI</span>
               </div>
               <p className="text-slate-400 text-sm">Instant email security with zero configuration.</p>
