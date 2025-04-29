@@ -1,0 +1,124 @@
+---
+---
+
+<div class="hero-animation">
+  <div class="email-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+      <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="shield-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+      <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="check-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+      <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="phone-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+      <path d="M17 1.01L7 1C5.9 1 5 1.9 5 3V21C5 22.1 5.9 23 7 23H17C18.1 23 19 22.1 19 21V3C19 1.9 18.1 1.01 17 1.01ZM17 19H7V5H17V19Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="center-logo">
+    <img src="/logo.png" alt="Safemail AI Logo" class="w-full h-full" />
+  </div>
+</div>
+
+<style>
+  .hero-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .center-logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: pulse 3s infinite ease-in-out;
+    filter: drop-shadow(0 0 1.5rem rgba(255, 255, 255, 0.7));
+  }
+  
+  .email-icon, .shield-icon, .check-icon, .phone-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.4));
+  }
+  
+  .email-icon {
+    top: 10%;
+    left: 20%;
+    animation: float 5s infinite ease-in-out, fadeInOut 5s infinite ease-in-out;
+  }
+  
+  .shield-icon {
+    top: 20%;
+    right: 15%;
+    animation: float 7s infinite ease-in-out, fadeInOut 7s infinite ease-in-out;
+  }
+  
+  .check-icon {
+    bottom: 15%;
+    left: 25%;
+    animation: float 6s infinite ease-in-out, fadeInOut 6s infinite ease-in-out;
+  }
+  
+  .phone-icon {
+    bottom: 20%;
+    right: 20%;
+    animation: float 8s infinite ease-in-out, fadeInOut 8s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.6));
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.1);
+      filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0.8));
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.6));
+    }
+  }
+</style>

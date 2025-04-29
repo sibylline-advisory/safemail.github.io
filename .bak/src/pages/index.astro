@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import HowItWorks from '../components/how-it-works.astro';
+import TestimonialCarousel from '../components/testimonial-carousel.astro';
+import TrustedBy from '../components/trusted-by.astro';
+import PricingTable from '../components/pricing-table.astro';
+import HeroAnimation from '../components/hero-animation.astro';
+import ScrollToTop from '../components/scroll-to-top.astro';
+---
+
+<Layout title="Safemail AI - Email Security Solution">
+  <div class="flex flex-col min-h-screen bg-white">
+    <Header />
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="py-20 md:py-32 bg-gradient-brand relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 md:px-6 relative">
+          <div class="grid gap-12 lg:grid-cols-2 items-center">
+            <div class="flex flex-col gap-6">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white">
+                Email security,
+                <span class="block">simplified.</span>
+              </h1>
+              <p class="text-xl text-white/80 max-w-[500px]">
+                Forward any suspicious email and get instant analysis. No installation. No configuration.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                <a href="#try-now" class="inline-flex h-11 items-center justify-center rounded-full px-6 py-2 bg-white text-primary-dark hover:bg-white/90 shadow font-medium">
+                  Try for Free
+                  <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="relative h-[400px] lg:h-[500px]">
+              <HeroAnimation />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">How It Works</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">Secure your inbox in three simple steps</p>
+          </div>
+          <HowItWorks />
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">What We Detect</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">
+              Our AI-powered analysis gives you complete confidence in your email security
+            </p>
+          </div>
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
+              <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium mb-2 text-slate-900">Phishing Detection</h3>
+              <p class="text-slate-600">
+                Identify if an email from a colleague is actually a clever phishing attack
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
+              <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                  <path d="M10 9H8" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium mb-2 text-slate-900">File Analysis</h3>
+              <p class="text-slate-600">
+                Safely analyze suspicious file attachments without risking your system
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
+              <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-medium mb-2 text-slate-900">Instant Results</h3>
+              <p class="text-slate-600">Get comprehensive analysis within minutes, not hours</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof Section -->
+      <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">What Our Users Say</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">
+              See why companies across industries rely on Safemail AI
+            </p>
+          </div>
+          <TestimonialCarousel />
+          <div class="mt-20">
+            <TrustedBy />
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section with Stripe integration -->
+      <section id="pricing" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900">Simple Pricing</h2>
+            <p class="text-slate-600 mt-4 max-w-[600px] mx-auto">Choose the plan that fits your security needs</p>
+          </div>
+          <PricingTable />
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="try-now" class="py-20 bg-gradient-brand relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 md:px-6 text-center relative">
+          <div class="max-w-[600px] mx-auto">
+            <h2 class="text-3xl font-medium tracking-tight text-white">Start Securing Your Emails Today</h2>
+            <p class="mt-4 text-white/80 text-lg">
+              Forward your first suspicious email and experience the peace of mind that comes with Safemail AI
+            </p>
+            <div class="mt-8">
+              <a href="#pricing" class="inline-flex h-11 items-center justify-center rounded-full px-8 bg-white text-primary-dark hover:bg-white/90 shadow font-medium">
+                Create Free Account
+              </a>
+            </div>
+            <p class="mt-6 text-sm text-white/70">No credit card required. Start with 10 free email analyses.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+    <ScrollToTop />
+  </div>
+</Layout>

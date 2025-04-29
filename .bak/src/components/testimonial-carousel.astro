@@ -1,0 +1,177 @@
+---
+const testimonials = [
+  {
+    name: "Sean P.",
+    handle: "@io_sean_p",
+    url: "https://twitter.com/io_sean_p",
+    content: "In our line of work, information security is paramount. Safemail makes identifying potential threats over email easy and helps us keep focused and safe."
+  },
+  {
+    name: "Seyi T.",
+    handle: "@seyitaylor",
+    url: "https://twitter.com/seyitaylor",
+    content: "As someone who relies heavily on email for client communications, Safemail gives me a way to quickly identify potential threats without losing focus."
+  },
+  {
+    name: "David M.",
+    handle: "@davidm_tech",
+    url: "#",
+    content: "We've reduced our team's email security incidents by 70% since implementing Safemail. The instant analysis provides peace of mind for our entire organization."
+  },
+  {
+    name: "Lisa R.",
+    handle: "@lisa_cybersec",
+    url: "#",
+    content: "The file attachment analysis is incredible. It caught a zero-day threat that our traditional security systems missed. Worth every penny."
+  }
+]
+---
+
+<div class="testimonial-carousel relative">
+  <div class="overflow-hidden">
+    <div class="testimonials-track flex transition-transform duration-500">
+      {testimonials.map(testimonial => (
+        <div class="testimonial-card min-w-full md:min-w-[calc(50%-1rem)] p-6 bg-white rounded-lg shadow-sm border border-slate-100">
+          <div class="flex items-center mb-4">
+            <div class="mr-4 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-medium">{testimonial.name}</h3>
+              <a href={testimonial.url} class="text-primary text-sm hover:underline">{testimonial.handle}</a>
+            </div>
+          </div>
+          <p class="text-slate-600">"{testimonial.content}"</p>
+        </div>
+      ))}
+    </div>
+  </div>
+  
+  <div class="flex justify-center mt-6 gap-2">
+    {testimonials.map((_, index) => (
+      <button class={`carousel-dot w-3 h-3 rounded-full ${index === 0 ? 'bg-primary' : 'bg-slate-300'}`} data-index={index}></button>
+    ))}
+  </div>
+  
+  <button class="carousel-prev absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-slate-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 md:block hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  
+  <button class="carousel-next absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-slate-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 md:block hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.testimonials-track');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    
+    let currentIndex = 0;
+    const maxIndex = testimonials.length - 1;
+    
+    // Setup for responsive carousel
+    const updateCarousel = () => {
+      const isMobile = window.innerWidth < 768;
+      const slideWidth = isMobile ? 100 : 50; // 100% on mobile, 50% on desktop
+      
+      // Set width of each card
+      testimonials.forEach(card => {
+        card.style.width = `${slideWidth}%`;
+      });
+      
+      // Update track position
+      if (isMobile) {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      } else {
+        // On desktop, show two at a time, but don't go past the end
+        const translateValue = Math.min(currentIndex, maxIndex - 1) * 50;
+        track.style.transform = `translateX(-${translateValue}%)`;
+      }
+      
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-primary', i === currentIndex);
+        dot.classList.toggle('bg-slate-300', i !== currentIndex);
+      });
+    };
+    
+    // Handle dot clicks
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
+      });
+    });
+    
+    // Handle prev/next buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+    }
+    
+    // Auto advance carousel every 5 seconds
+    const autoAdvance = () => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateCarousel();
+    };
+    
+    let carouselInterval = setInterval(autoAdvance, 5000);
+    
+    // Pause auto-advance on hover
+    const carouselElement = document.querySelector('.testimonial-carousel');
+    if (carouselElement) {
+      carouselElement.addEventListener('mouseenter', () => {
+        clearInterval(carouselInterval);
+      });
+      
+      carouselElement.addEventListener('mouseleave', () => {
+        carouselInterval = setInterval(autoAdvance, 5000);
+      });
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', updateCarousel);
+    
+    // Initial setup
+    updateCarousel();
+  });
+</script>
+
+<style>
+  .testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .testimonial-card {
+    flex-shrink: 0;
+    padding: 1.5rem;
+  }
+  
+  .carousel-dot {
+    transition: background-color 0.3s ease;
+  }
+</style>
