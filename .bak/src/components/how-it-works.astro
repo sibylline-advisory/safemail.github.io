@@ -1,0 +1,77 @@
+---
+---
+
+<div class="grid gap-8 md:grid-cols-3">
+  <div class="bg-white rounded-lg p-6 relative border border-slate-100 shadow-sm">
+    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect width="20" height="16" x="2" y="4" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-medium mb-2 text-slate-900">Forward Suspicious Emails</h3>
+    <p class="text-slate-600">Simply forward any suspicious email to our analysis email address</p>
+    <div class="mt-4 bg-slate-50 p-3 rounded-md flex items-center justify-between">
+      <code class="text-sm font-mono text-slate-800">agent@inbound.safemail.ai</code>
+      <button id="copy-button" class="text-primary hover:text-primary/80">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="bg-white rounded-lg p-6 relative border border-slate-100 shadow-sm">
+    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4"/>
+        <path d="M12 8h.01"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-medium mb-2 text-slate-900">AI Analysis</h3>
+    <p class="text-slate-600">Our AI engine analyzes the email content, headers, links, and attachments for malicious indicators</p>
+  </div>
+  <div class="bg-white rounded-lg p-6 relative border border-slate-100 shadow-sm">
+    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <path d="m9 11 3 3L22 4"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-medium mb-2 text-slate-900">Get Instant Results</h3>
+    <p class="text-slate-600">Receive a detailed security report directly in your inbox with a clear verdict and recommended actions</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyButton = document.getElementById('copy-button');
+    if (copyButton) {
+      copyButton.addEventListener('click', () => {
+        const emailText = 'agent@inbound.safemail.ai';
+        navigator.clipboard.writeText(emailText)
+          .then(() => {
+            // Visual feedback
+            copyButton.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            `;
+            
+            setTimeout(() => {
+              copyButton.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                </svg>
+              `;
+            }, 2000);
+          })
+          .catch(err => {
+            console.error('Failed to copy text: ', err);
+          });
+      });
+    }
+  });
+</script>
