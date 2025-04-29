@@ -3,9 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import HowItWorks from '../components/how-it-works.astro';
-import Testimonials from '../components/testimonials.astro';
+import TestimonialCarousel from '../components/testimonial-carousel.astro';
 import TrustedBy from '../components/trusted-by.astro';
 import PricingTable from '../components/pricing-table.astro';
+import HeroAnimation from '../components/hero-animation.astro';
+import ScrollToTop from '../components/scroll-to-top.astro';
 ---
 
 <Layout title="Safemail AI - Email Security Solution">
@@ -37,10 +39,7 @@ import PricingTable from '../components/pricing-table.astro';
               </div>
             </div>
             <div class="relative h-[400px] lg:h-[500px]">
-              <!-- Placeholder for the hero animation -->
-              <div class="absolute inset-0 flex items-center justify-center text-white">
-                <img src="/safemail-icon-wb.png" alt="Safemail AI" class="w-64 h-64">
-              </div>
+              <HeroAnimation />
             </div>
           </div>
         </div>
@@ -68,8 +67,8 @@ import PricingTable from '../components/pricing-table.astro';
           </div>
           <div class="grid gap-8 md:grid-cols-3">
             <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+              <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
                 </svg>
               </div>
@@ -79,8 +78,8 @@ import PricingTable from '../components/pricing-table.astro';
               </p>
             </div>
             <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+              <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                   <path d="M14 2v6h6" />
                   <path d="M16 13H8" />
@@ -94,8 +93,8 @@ import PricingTable from '../components/pricing-table.astro';
               </p>
             </div>
             <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-100">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+              <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
               </div>
@@ -115,7 +114,7 @@ import PricingTable from '../components/pricing-table.astro';
               See why companies across industries rely on Safemail AI
             </p>
           </div>
-          <Testimonials />
+          <TestimonialCarousel />
           <div class="mt-20">
             <TrustedBy />
           </div>
@@ -154,5 +153,6 @@ import PricingTable from '../components/pricing-table.astro';
     </main>
 
     <Footer />
+    <ScrollToTop />
   </div>
 </Layout>

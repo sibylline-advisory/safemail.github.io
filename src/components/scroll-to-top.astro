@@ -1,0 +1,41 @@
+---
+---
+
+<button id="scroll-to-top" class="fixed bottom-8 right-8 bg-white shadow-lg rounded-full p-3 text-slate-600 hover:text-primary z-50 transition-all duration-300 opacity-0 invisible">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m18 15-6-6-6 6"/>
+  </svg>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    
+    if (scrollToTopButton) {
+      // Show button when page is scrolled down
+      const toggleVisibility = () => {
+        if (window.scrollY > 500) {
+          scrollToTopButton.classList.remove('opacity-0', 'invisible');
+          scrollToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+          scrollToTopButton.classList.remove('opacity-100', 'visible');
+          scrollToTopButton.classList.add('opacity-0', 'invisible');
+        }
+      };
+      
+      // Scroll to top when button is clicked
+      scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Listen to scroll event
+      window.addEventListener('scroll', toggleVisibility);
+      
+      // Initial check
+      toggleVisibility();
+    }
+  });
+</script>
