@@ -12,35 +12,19 @@ export default function TestimonialCarousel() {
   const testimonials = [
     {
       name: "Sean P.",
-      role: "Information Security Officer",
-      company: "Financial Services",
+      role: "Founder and CEO",
+      company: "Seshat Bank",
       content:
         "In our line of work, information security is paramount. Safemail AI makes identifying potential threats over email easy and helps us keep focused and safe.",
       avatar: "SP",
     },
     {
       name: "Seyi T.",
-      role: "Legal Consultant",
-      company: "Law Firm",
+      role: "Founder",
+      company: "Shopthru",
       content:
         "As someone who relies heavily on email for client communications, Safemail gives me a way to quickly identify potential threats without losing focus.",
       avatar: "ST",
-    },
-    {
-      name: "Maria L.",
-      role: "CTO",
-      company: "Tech Startup",
-      content:
-        "We implemented Safemail AI across our organization and saw a 90% reduction in successful phishing attempts. The simplicity of just forwarding an email is what makes it so effective.",
-      avatar: "ML",
-    },
-    {
-      name: "David K.",
-      role: "VP of Operations",
-      company: "Healthcare",
-      content:
-        "With sensitive patient data at stake, we can't afford security breaches. Safemail AI provides an extra layer of protection that's both powerful and easy to use.",
-      avatar: "DK",
     },
   ]
 
