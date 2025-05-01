@@ -1,11 +1,47 @@
-import { Mail, Search, FileText } from "lucide-react"
+"use client"
+
+import { Mail, Search, FileText, Copy } from "lucide-react"
+import { useState } from "react"
 
 export default function HowItWorks() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyEmail = (email: string) => {
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      })
+      .catch(err => {
+        console.error('Failed to copy email:', err)
+      })
+  }
+  
   const steps = [
     {
       icon: <Mail className="h-10 w-10 text-white" />,
       title: "Forward the Email",
-      description: "Simply forward any suspicious email to agent@inbound.safemail.ai",
+      description: (
+        <>
+          Once signed up, simply forward any suspicious email to{" "}
+          <span className="relative">
+            <button 
+              onClick={() => handleCopyEmail("agent@inbound.safemail.ai")}
+              className="text-primary font-medium hover:underline inline-flex items-center gap-1 transition-colors hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2 rounded-sm px-1"
+              aria-label="Copy email address"
+              title="Click to copy"
+            >
+              agent@inbound.safemail.ai
+              <Copy className="h-3 w-3 inline ml-1" />
+            </button>
+            {copied && (
+              <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs px-2 py-1 rounded shadow-sm">
+                Copied!
+              </span>
+            )}
+          </span>
+        </>
+      ),
     },
     {
       icon: <Search className="h-10 w-10 text-white" />,

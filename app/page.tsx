@@ -252,13 +252,8 @@ export default function Home() {
               <h3 className="font-medium text-sm text-white mb-4">Legal</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/privacy" className="text-slate-400 hover:text-white text-sm">
+                  <Link href="https://storage.googleapis.com/syb_us_cdn/Sibylline%20Labs%20-%20Website%20Privacy%20Policy%20v1.pdf" className="text-slate-400 hover:text-white text-sm" target="_blank" rel="noopener noreferrer">
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-slate-400 hover:text-white text-sm">
-                    Terms of Service
                   </Link>
                 </li>
               </ul>

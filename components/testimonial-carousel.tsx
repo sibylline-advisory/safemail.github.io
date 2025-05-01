@@ -26,22 +26,6 @@ export default function TestimonialCarousel() {
         "As someone who relies heavily on email for client communications, Safemail gives me a way to quickly identify potential threats without losing focus.",
       avatar: "ST",
     },
-    {
-      name: "Maria L.",
-      role: "CTO",
-      company: "Tech Startup",
-      content:
-        "We implemented Safemail AI across our organization and saw a 90% reduction in successful phishing attempts. The simplicity of just forwarding an email is what makes it so effective.",
-      avatar: "ML",
-    },
-    {
-      name: "David K.",
-      role: "VP of Operations",
-      company: "Healthcare",
-      content:
-        "With sensitive patient data at stake, we can't afford security breaches. Safemail AI provides an extra layer of protection that's both powerful and easy to use.",
-      avatar: "DK",
-    },
   ]
 
   const nextTestimonial = () => {
