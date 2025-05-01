@@ -62,7 +62,6 @@ export const metadata: Metadata = {
     shortcut: '/safemail_ai_logo.png',
     apple: '/safemail_ai_logo.png',
   },
-  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({
