@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -28,13 +28,13 @@ export default function TestimonialCarousel() {
     },
   ]
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length)
-  }
+  }, [testimonials.length])
 
-  const prevTestimonial = () => {
+  const prevTestimonial = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+  }, [testimonials.length])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,7 +42,7 @@ export default function TestimonialCarousel() {
     }, 5000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [nextTestimonial])
 
   return (
     <div className="relative max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ export default function TestimonialCarousel() {
             <Avatar className="h-16 w-16 mb-6">
               <AvatarFallback className="bg-primary/5 text-primary">{testimonials[activeIndex].avatar}</AvatarFallback>
             </Avatar>
-            <blockquote className="text-xl mb-6 text-slate-700">"{testimonials[activeIndex].content}"</blockquote>
+            <blockquote className="text-xl mb-6 text-slate-700">&ldquo;{testimonials[activeIndex].content}&rdquo;</blockquote>
             <div>
               <p className="font-medium text-slate-900">{testimonials[activeIndex].name}</p>
               <p className="text-sm text-slate-500">

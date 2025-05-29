@@ -167,7 +167,7 @@ export default function HeroAnimation() {
                   <div className="mx-auto w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle className="h-10 w-10 text-green-500" />
                   </div>
-                  <h3 className="text-xl font-medium mb-2 text-slate-900">You're Protected</h3>
+                  <h3 className="text-xl font-medium mb-2 text-slate-900">You&apos;re Protected</h3>
                   <p className="text-slate-500 max-w-[350px]">
                     Safemail AI detected and warned you about this phishing attempt, keeping your information safe.
                   </p>
