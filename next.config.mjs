@@ -19,7 +19,13 @@ const nextConfig = {
   compress: true,
   reactStrictMode: true,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: {
+      cacheFolder: ".next/css-cache",
+      cssnano: {
+        preset: "default"
+      },
+      logLevel: "info"
+    },
     optimisticClientCache: true,
   },
 }
