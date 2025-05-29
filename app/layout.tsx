@@ -18,6 +18,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://safemail.ai'),
   title: {
     default: 'Safemail AI – Email Security, Simplified',
     template: '%s | Safemail AI'
