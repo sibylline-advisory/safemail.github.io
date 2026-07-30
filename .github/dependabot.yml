@@ -1,0 +1,18 @@
+version: 2
+
+updates:
+  # Keep SHA-pinned GitHub Actions moving forward. Dependabot rewrites the SHA
+  # and the trailing version comment together, so pins stay immutable and the
+  # workflows stay readable.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
