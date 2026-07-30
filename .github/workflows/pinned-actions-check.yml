@@ -1,0 +1,44 @@
+name: Pinned Actions Check
+
+# Supply-chain guard (ENG-2401): every third-party `uses:` must reference an
+# immutable commit SHA, so a re-pointed tag on a compromised action cannot be
+# pulled into a run. Fails the PR when a workflow introduces a mutable ref.
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/**"
+      - ".github/actions/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pinned-actions-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pinact:
+    name: pinact run --check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+
+      - name: Install pinact
+        env:
+          PINACT_VERSION: v4.1.1
+          PINACT_CHECKSUM: d1cffebe5704b74e2e5f8a864efb9f7e54768972dc686188c008033fb1797841
+        run: |
+          set -euo pipefail
+          curl -fsSL -o pinact.tar.gz \
+            "https://github.com/suzuki-shunsuke/pinact/releases/download/${PINACT_VERSION}/pinact_linux_amd64.tar.gz"
+          echo "${PINACT_CHECKSUM}  pinact.tar.gz" | sha256sum -c -
+          tar -xzf pinact.tar.gz pinact
+          sudo install -m 0755 pinact /usr/local/bin/pinact
+
+      - name: Verify every `uses:` is pinned to a full commit SHA
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: pinact run --check
